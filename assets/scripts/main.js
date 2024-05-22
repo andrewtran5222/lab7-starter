@@ -42,11 +42,10 @@ function addRecipesToDocument(recipes) {
 	//            Append each element to <main>
 	const main = document.querySelector('main');
 	recipes.forEach((recipe) => {
-		const recipeCard = document.createElement("recipe-card");
+		let recipeCard = document.createElement("recipe-card");
 		recipeCard.data = recipe;
 		main.appendChild(recipeCard);
 	});
-
 }
 
 /**
