@@ -58,7 +58,7 @@ function saveRecipesToStorage(recipes) {
 	// B1. TODO - Complete the functionality as described in this function
 	//            header. It is possible in only a single line, but should
 	//            be no more than a few lines.
-	localStorage.setItem(recipes.toString());
+	localStorage.setItem("recipes", JSON.stringify(recipes));
 }
 
 /**
@@ -94,9 +94,9 @@ function initFormHandler() {
 		saveRecipesToStorage(localRecipes);
 	});
 	// B10. TODO - Get a reference to the "Clear Local Storage" button
-	const button = document.querySelector("button.danger");
+	const clearButton = document.querySelector("button.danger");
 	// B11. TODO - Add a click event listener to clear local storage button
-	button.addEventListener("click", () => {
+	clearButton.addEventListener("click", () => {
 	// Steps B12 & B13 will occur inside the event listener from step B11
 	// B12. TODO - Clear the local storage
 	localStorage.clear();
